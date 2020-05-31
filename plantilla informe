@@ -17,6 +17,15 @@ Su formulación debe responder a tres criterios básicos:
 * Operatividad. El planteamiento operacional consiste en especificar no sólo el fenómeno, sino también en qué unidades va a ser medidos cada uno de estos efectos. 
 
 2. OBJETIVOS
+- Objetivo general
+
+* Realizar un tutorial de como crear una maquina virtual utilizando la plataforma Google cloud: compute engine, analizando las ventajas y desventajas que posee junto con su  utilidad.
+
+- Objetivos especificos 
+
+* Analizar las ventajas y desventajas de una maquina virtual.
+* Explicar los usos que tienen las maquinas virtuales en la actualidad.
+* Mostrar el proceso de crear una maquina virtual a traves de la plataforma Google cloud: compute engine.
 
 Los objetivos deben responder claramente la pregunta ¿Qué investigar? 
 El objetivo de la investigación es el enunciado claro y preciso de las metas que se persiguen. En los objetivos de la investigación se detallan las acciones en las que debe emprender el investigador para contestar a las preguntas planteadas en la formulación y sistematización del problema y tiene como propósito el direccionar la investigación. 
@@ -48,6 +57,45 @@ La descripción  es un texto académico que expone sistemáticamente los avances
 * ¿Dónde? El lugar en donde se realizó la investigación. Este es un dato de referencia con varios propósitos: uno es para organizar la información de lo macro a micro (de carácter internacional, nacional o local); otro propósito es para saber la manera de establecer contacto con el autor de la investigación si así fuera el deseo del investigador que realiza el estado del arte; por ejemplo si es de la localidad puede contactarlo de manera directa y cara a cara, si no tendrá que establecer contacto por otros medios, ahora tenemos al alcance los medios electrónicos para ello que recortan el tiempo de la retroalimentación de un mensaje. 
 
 4. MARCO TEÓRICO 
+
+Una máquina virtual (MV) se lo puede definir como un ordenador que utiliza unicamente software, emulando virtualmente los componentes del 
+hardaware como: el disco duro, la memoria RAM, tarejtas de red, tajetas gráfica, etc. Dicha máquina se la puede ejecutar como una aplicación 
+y no afecta al sistema operativo que posea el ordenador en donde se ejecutara, por lo tanto estas máquinas virtuales son compatibles con 
+todos los ordenadores, una carcteristica peculiar de las MV es que puedes crear el hardware de acuerdo a tus especificaciones o requerimientos;
+además se pude recrear entornos de red, conectando asi varias maquinas virtuales siendo muy utilizados en el campo de informatica como medida 
+para la detección de virus utilzando como "conejillo de indias" a las MV, para cuando un archivo de fuente desconocida llegue al nuestro 
+ordenador lo podamos ejecutar en la maquina virtual, verificando si se trata de un virus o no.
+
+Actualemnte las maquinas virtuales se diferencian por su funcionalidad obteniendo: las MV de sistemas y las MV de proceso. La máquina virtual 
+de sistemas como se mencionó anteriormente emula aun un ordenador, logrando ejecutarse otro sistema operativo aparte del S.O propio del 
+ordenador, el PC funciona unicamente como host o anfitrión es decir el dispositivo en donde se ejeuta el programa, para el S.O virtual 
+todo funciona como si fuera un PC fisico, inclusive se puede crear otra máquina virtual dentro de la anterior MV. 
+Por otro lado las máquinas virtuales de proceso ejecutan un un proceso conreto al igual que una aplicacion unicamente para ser ejecutado
+
+existen diferentes plataformas en donde poder crear una MV, en este caso utilizaremos Google Cloud Plataform (GCP), es una platafomra que consta 
+de un "conjunto de recursos físicos como computadoras y unidades de disco duro,y virtuales como las máquinas virtuales (MV) que se encuentran 
+en los centros de datos de Google de todo el mundo" (Google,2020) GCP ofrece una diversidad de servicios, en esta ocasion para la creación de la 
+máquina virtual se utilizará Compute engine un servicio de cloud computing que suministra MV localizados en los centros de Google; incluyen 
+almacenamiento en discos persistentes que proporcionan espacio un almacenamiento directo, seguro y consta, brindando un rendimiento uniforme.
+Estas máquinas virtuales se inician de una manera muy rapida permitiendo personalizarlas segun las necesidades del usuario, algo que se debe 
+tener en cuenta es que Google cloud no es gratis, es una plataforma que tiene un coste es decir, pagas por obtener dichos servicio, por lo que
+debes en cuenta el enfoque de tu máquina virtual.
+
+la plataforma de Gogle Coud tiene grandes beneficios cuando nos referimos a las ma´quinas virtuales, como se mencionó anteriormente posee una red 
+global rapida y confiable, la infraestructura brinda una defensa mediante capas de protección encriptando toda la información de manera automática 
+"Las identidades, los usuarios y los servicios se autentican de forma segura con varios factores. Protegemos el acceso a los datos sensibles con 
+herramientas avanzadas, como las llaves de seguridad a prueba de suplantación de identidad (phishing)."(GoogleCloud2020); los centros de datos de 
+GCP tiene las instalaciones mejor aseguradas con una buena eficiencia energética. tra de las ventajas es que no necesia de una infraestructura 
+propia, debido a que google utiliza su base de datos se puede acceder por medio de la plataforma Google; tiene un bajo coste pagando unicamente 
+los recursos con los que se va a trabajar,además, ofrece una serie de descuentos dependendo de lo que el usuario necesite. es una plataforma de 
+alta confienza utilizada por varias PYMEs como "Minka, BotMaker,Properati,Mercado Libre, entre otras."(GoogleCloud,2020).
+
+Por otra parte, a diferencia de otras platafrmas como AWS o Azure,Google cloud no posee tantos cebtros globales como los anteriormentes señealados
+según la empresa consultora y de investigación de las tecnologías de la información Gartner.inc señalo "clientes suelen elegir a Google como 
+proveedor secundario en lugar de un proveedor estratégico; aunque es cada vez más elegido como alternativa estratégica a AWS por los clientes 
+cuyas empresas compiten con Amazon".(Powerdata,2019)
+
+
 
 Este punto requiere que el estudiante realice una amplia consulta bibliográfica sobre el tema de su trabajo.
 

@@ -133,6 +133,11 @@ Luego procederemos a elegir como queremos abrirla, en este caso se escoge la opc
 
 10. APORTACIONES
 
+* Tener en cuenta el proposito al que se le va a designar la maquina virtual: este debido a que en Google Cloud la cantidad de almacenamiento 
+esta relacionada con el precio es decir que mientras mas almacenamiento se desee mas va a costar.
+
+propia, debido a que google utiliza su base de datos se puede acceder por medio de la plataforma Google; tiene un bajo cost
+
 En este punto se indicará todo lo adicional fruto de lo investigado que se haya agregado al trabajo.
 
 

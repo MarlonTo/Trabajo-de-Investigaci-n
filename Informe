@@ -1,5 +1,5 @@
 # Informe
-Tutorial de Compute Engine: Virtual Machines (VMs) | Google Cloud, para generación de máquinas virtuales. 
+Envío y recepción de mensajes MQTT con pub/sub en Node -Red. 
 
 
 1. PLANTEAMIENTO DEL PROBLEMA
@@ -40,53 +40,43 @@ La descripción  es un texto académico que expone sistemáticamente los avances
 
 4. MARCO TEÓRICO 
 
-Una máquina virtual (MV) se lo puede definir como un ordenador que utiliza unicamente software, emulando virtualmente los componentes del 
-hardaware como: el disco duro, la memoria RAM, tarejtas de red, tajetas gráfica, etc. Dicha máquina se la puede ejecutar como una aplicación 
-y no afecta al sistema operativo que posea el ordenador en donde se ejecutara, por lo tanto estas máquinas virtuales son compatibles con 
-todos los ordenadores, una carcteristica peculiar de las MV es que puedes crear el hardware de acuerdo a tus especificaciones o requerimientos;
-además se pude recrear entornos de red, conectando asi varias maquinas virtuales siendo muy utilizados en el campo de informatica como medida 
-para la detección de virus utilzando como "conejillo de indias" a las MV, para cuando un archivo de fuente desconocida llegue al nuestro 
-ordenador lo podamos ejecutar en la maquina virtual, verificando si se trata de un virus o no.
+NODE-RED
 
-Actualemnte las maquinas virtuales se diferencian por su funcionalidad obteniendo: las MV de sistemas y las MV de proceso. La máquina virtual 
-de sistemas como se mencionó anteriormente emula aun un ordenador, logrando ejecutarse otro sistema operativo aparte del S.O propio del 
-ordenador, el PC funciona unicamente como host o anfitrión es decir el dispositivo en donde se ejeuta el programa, para el S.O virtual 
-todo funciona como si fuera un PC fisico, inclusive se puede crear otra máquina virtual dentro de la anterior MV. 
-Por otro lado las máquinas virtuales de proceso ejecutan un un proceso conreto al igual que una aplicacion unicamente para ser ejecutado
+Node-RED es una herramienta de programación visual la cual no muestra visualmente las relaciones y funciones, además, permiten programar sin
+tener que escribir una línea, todo ello mediante nodos gráficos, lo podemos definir como un editor de flujo basado en el navegador, donde se 
+puede añadir o eliminar nodos y conectarlos entre sí con el fin de hacer que se comuniquen entre ellos, es decir, es una herramienta muy potente 
+que sirve para comunicar hardware y servicios de una forma muy rápida y sencilla simplificando la  programación del lado del servidor gracias 
+a la programación visual.
 
-existen diferentes plataformas en donde poder crear una MV, en este caso utilizaremos Google Cloud Plataform (GCP), es una platafomra que consta 
-de un "conjunto de recursos físicos como computadoras y unidades de disco duro,y virtuales como las máquinas virtuales (MV) que se encuentran 
-en los centros de datos de Google de todo el mundo" (Google,2020) GCP ofrece una  diversidad de servicios, en esta ocasion para la creación de la  
-máquina virtual se utilizará Compute engine un servicio de cloud computing que suministra MV localizados en los centros de Google; incluyen 
-almacenamiento en discos persistentes que proporcionan espacio un almacenamiento directo, seguro y consta, brindando un rendimiento uniforme.
-Estas máquinas virtuales se inician de una manera muy rapida permitiendo personalizarlas segun las necesidades del usuario, algo que se debe
-tener en cuenta es que Google cloud no es gratis, es una plataforma que tiene un coste es decir, pagas por obtener dichos servicio, por lo que
-debes en cuenta el enfoque de tu máquina virtual.
+Por lo tanto, podemos decir que es un modelo que se presta muy bien a una representación visual y lo hace más accesible a una gama más amplia de
+usuarios. Si alguien puede dividir un problema en pasos discretos, puede ver un flujo y tener una idea de lo que está haciendo; sin tener que
+entender las líneas individuales de código dentro de cada nodo "node-red,2019".
 
-la plataforma de Gogle Coud tiene grandes beneficios cuando nos referimos a las ma´quinas virtuales, como se mencionó anteriormente posee una red 
-global rapida y confiable, la infraestructura brinda una defensa mediante capas de protección encriptando toda la información de manera automática 
-"Las identidades, los usuarios y los servicios se autentican de forma segura con varios factores. Protegemos el acceso a los datos sensibles con 
-herramientas avanzadas, como las llaves de seguridad a prueba de suplantación de identidad (phishing)."(GoogleCloud2020); los centros de datos de 
-GCP tiene las instalaciones mejor aseguradas con una buena eficiencia energética. tra de las ventajas es que no necesia de una infraestructura 
-propia, debido a que google utiliza su base de datos se puede acceder por medio de la plataforma Google; tiene un bajo coste pagando unicamente 
-los recursos con los que se va a trabajar,además, ofrece una serie de descuentos dependendo de lo que el usuario necesite. es una plataforma de 
-alta confienza utilizada por varias PYMEs como "Minka, BotMaker,Properati,Mercado Libre, entre otras."(GoogleCloud,2020).
+MQTT
 
-Por otra parte, a diferencia de otras platafrmas como AWS o Azure,Google cloud no posee tantos cebtros globales como los anteriormentes señealados
-según la empresa consultora y de investigación de las tecnologías de la información Gartner.inc señalo "clientes suelen elegir a Google como 
-proveedor secundario en lugar de un proveedor estratégico; aunque es cada vez más elegido como alternativa estratégica a AWS por los clientes 
-cuyas empresas compiten con Amazon".(Powerdata,2019).Por lo tanto, google Cloud Plataformn posee una baja coste de sus servicios pero carece 
-centros  de almacenamento como las dos plataformas anteriormente mencionadas,  siendo esto algo importante al momento de       desarrolar una  MV.
+MQTT también conocido como Message Queing Telemetry Transport. Es un protocolo de comunicación M2M (machine-to-machine), este 
+tiene como base la pila TCP/IP para la comunicación. Algo característico de este protocolo es que cada conexión se mantiene abierta y se la puede
+reutilizar en cada comunicación. Su funcionamiento es a través de un servicio de mensajería push con patrón publicador/suscriptor (pub-sub) es 
+decir que  los clientes se conectan con un servidor central llamado bróker, estos mensaje se disponen por medio de tópicos organizados
+en forma jerárquica para así poder filtrar los mensajes que son enviados a cada cliente, por lo que, un cliente puede publicar un mensaje en un
+determinado topic y otros clientes interesados pueden suscribirse a dicho topic, mientras que el broker les hará llegar los mensajes suscritos.
 
-Este punto requiere que el estudiante realice una amplia consulta bibliográfica sobre el tema de su trabajo.
+Mediante un proceso se lo puede explicar de la siguiente manera, los clientes inician con una conexión TCP/IP con el broker, este mantiene 
+un registro de los clientes que están conectados, la conexión se mantiene abierta hasta que el cliente decida finalizarla MQTT emplea por
+defecto el puerto 1883 y el 8883 cuando funciona sobre TLS (Transport Layer Security)( seguridad de la capa de transporte), el cliente envía
+un mensaje CONNECT el cual contiene la información necesaria (nombre de usuario, contraseña, client-id, etc) el broker  una vez captado 
+el envío lo responde con un mensaje CONNACK que contiene el resultado de la conexión (aceptada, rechazada, etc). De´pdendiendo de que 
+tipo de mensajería se desea realiza esta envía distintos mensaje de los cuales podemos obtener:
 
-Se describe la teoría o conjunto teórico apropiado con la cual el investigador enfrenta su proyecto y la realidad dentro del cual se ubica el problema de investigación, incluye:
-* Describir la actual relación entre el problema enunciado y el sistema o sistemas teóricos/conceptuales que pueden guiarlo.
-* Dejar claramente especificada la relación entre la teoría que guía la investigación y la realidad que se percibe como problema de investigación.
-* Conceptualizar el problema en la forma de un modelo, útil para clarificar los conceptos y relaciones conceptuales.
-* Señalar la forma en que la investigación actual enriquece, amplía y profundiza el conocimiento teórico, sustantivo y metodológico acumulado en estudios previos.
+Para enviar los mensajes el cliente emplea mensajes PUBLISH los cuales contienen el topic y el payload.
 
-Para su desarrollo debe evitarse en lo posible redactar párrafos continuos de texto, para lo cual se debe utilizar  mentefactos, cuadro comparativos, esquemas o mapas conceptuales
+Para suscribirse y desuscribirse se emplean mensajes SUBSCRIBE y UNSUSCRIBE, que el servidor lo responde con SUBACK y UNSUBACK.
+
+Para asegurar que la conexión siempre está activa los clientes periódicamente mandan un mensaje PINGREQ este es respondido por el servidor con un PINGRESP.
+
+Para que el cliente se logre desconectar este envia un mensaje de DISCONNECT.
+
+
 
 5. DIAGRAMAS
 Como se puede modificar en la imagen las máquinas virtuales constan de una extensión para la migración en la informática, una puerta NAT y un almacenamiento en la nube.
